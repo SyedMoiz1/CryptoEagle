@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700;800;900&family=Carme&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #F7CA14;
+  --secondary-color: #535353;
+  --tertiary-color: #333;
+}
+
+body {
+  background: var(--secondary-color);
+  margin: 0;
+  padding: 0;
+  font-family: "Be Vietnam Pro";
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #333;
+  color: white;
+}
+
+.cryptoeagle-logo {
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding-left: 30px;
+  position: relative;
+}
+
+.navbar .cryptoeagle-logo span {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.navbar .logo {
+  width: 58px;
+  position: absolute;
+  top: 13px;
+  padding-left: 8px;
+  float: left;
+}
+
+.navbar-links {
+  height: 100%;
+}
+
+.navbar-links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-right: 30px;
+}
+
+.navbar-links li {
+  list-style: none;
+  border-radius: 10px;
+}
+
+.navbar-links li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+}
+
+.navbar-links li:hover {
+  background: var(--secondary-color);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 30px;
+  right: 1rem;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (max-width: 875px) {
+  .navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .toggle-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+    padding-left: 30px;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .navbar-links ul li {
+    text-align: center;
+  }
+
+  .navbar-links ul li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.hero {
+  padding-right: 6em;
+  padding-left: 6em;
+}
+
+.hero_container {
+  padding-top: 14em;
+  padding-bottom: 38em;
+  size: 25%;
+}
+
+.hero_slogan {
+  font-size: 5em;
+  font-weight: 800;
+  color: white;
+}
+.hero_slogan span {
+  color: var(--primary-color);
+}
+.hero_slogan .span1 {
+  font-size: 0.5px;
+}
+
+.home-page-background {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("/../images/bitcoin-background.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/../images/bitcoin-background.png");
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.coins-logo {
+  width: 80px;
+}
+
+.news-logo {
+  width: 80px;
+}
+
+.coins-logo {
+  width: 80px;
+}
+
+.learn-logo {
+  width: 80px;
+}
+
+.community-logo {
+  width: 80px;
+}
+
+.account-logo {
+  width: 80px;
+}
+
+.instagram-logo {
+  width: 20px;
+}
+
+.facebook-logo {
+  width: 20px;
+}
+
+.twitter-logo {
+  width: 20px;
+}
+
+.email-logo {
+  width: 20px;
+}
+
+.cryptoeagle-footer {
+  width: 58px;
+}
+
+.features_container {
+  width: 100%;
+  height: 800px;
+  padding: 43px;
+}
+
+.features_top {
+  width: 100%;
+  height: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.features_bottom {
+  width: 100%;
+  height: 45%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.bottom_heading {
+  width: 100%;
+  height: 10%;
+}
+
+.page_footer {
+  background-color: var(--tertiary-color);
+}/*# sourceMappingURL=main.css.map */
