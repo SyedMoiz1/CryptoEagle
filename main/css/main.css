@@ -178,8 +178,8 @@ body {
 }
 
 .home-page-background {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("/../images/bitcoin-background.png");
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/../images/bitcoin-background.png");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../images/bitcoin-background.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/bitcoin-background.png");
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -236,6 +236,7 @@ body {
   padding: 43px;
 }
 
+/*top row of features */
 .features_top {
   width: 100%;
   height: 45%;
@@ -244,12 +245,129 @@ body {
   display: flex;
 }
 
+
+/*first box in top row */
+.features_top .top1{
+  
+  border-radius: 20px;
+}
+.features_top .top1 .top1_container{
+  margin: 25px;
+}
+
+.features_top .top1 .about_features{
+  font-weight: 700;
+  font-size: 30px;
+  color: white;
+}
+
+.features_top .top1 span{
+  color: var(--primary-color);
+  font-weight: 700
+
+}
+
+
+/*second box in top row */
+.features_top .top2{
+  
+  border-radius: 20px;
+}
+.features_top .top2 .top2_container{
+  background-color: #333;
+  margin: 25px;
+  padding: 20px;
+  border-radius: 20px;
+  height: 300px;
+  width: 400px;
+}
+.features_top .top2 .top2_container .top2_text{
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+}
+
+
+/*third box in top row */
+.features_top .top3{
+  
+}
+.features_top .top3 .top3_container{
+  background-color: #333;
+  margin: 25px;
+  padding: 20px;
+  border-radius: 20px;
+  height: 300px;
+  width: 400px;
+
+}
+.features_top .top3 .top3_container .top3_text{
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+}
+
 .features_bottom {
   width: 100%;
   height: 45%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.features_bottom .bottom1{
+  
+  border-radius: 20px;
+}
+.features_bottom .bottom1 .bottom1_container{
+  background-color: #333;
+  margin: 25px;
+  padding: 20px;
+  border-radius: 20px;
+  height: 300px;
+  width: 400px;
+
+}
+.features_bottom .bottom1 .bottom1_container .bottom1_text{
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+}
+
+.features_bottom .bottom2{
+  
+  border-radius: 20px;
+}
+.features_bottom .bottom2 .bottom2_container{
+  background-color: #333;
+  margin: 25px;
+  padding: 20px;
+  border-radius: 20px;
+  height: 300px;
+  width: 400px;
+}
+.features_bottom .bottom2 .bottom2_container .bottom2_text{
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+}
+
+.features_bottom .bottom3{
+  
+  border-radius: 20px;
+}
+.features_bottom .bottom3 .bottom3_container{
+  background-color: #333;
+  margin: 25px;
+  padding: 20px;
+  border-radius: 20px;
+  height: 300px;
+  width: 400px;
+}
+.features_bottom .bottom3 .bottom3_container .bottom3_text{
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
 }
 
 .bottom_heading {
