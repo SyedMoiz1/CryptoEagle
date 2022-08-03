@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CryptoEagle</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/main.css">
+
+</head>
+
+<body>
+  
+  <div class="page-preloader">
+    <img src="../images/coin-preloader.gif" alt="">
+  </div>
+
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-2 " id="navbar">
+    <div class="container" style="max-width: 1700px;">
+      <a class="navbar-brand" href="../index.html" style="font-size: 32px; font-weight:600; ">Crypto<span
+          style="color: #f7ca14;">Eagle</span>
+        <img src="../images/crypto-eagle-logo.png" alt="" style="height: 60px; ">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="mx-auto"></div>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="../index.html" style="font-size:18px ;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="../pages/coins_home.html" style="font-size:18px ;">Coins</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#" style="font-size:18px ;">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#" style="font-size:18px ;">Sign in</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="hero_news">
+    <div class="container">
+      <p style="color:white ; " id="news-title">Top News Articles</p>
+      <div class="container" style="display: inline; justify-content: start;">
+
+        <div class="input-group" style="height: 38px;">
+          <div class="form-outline">
+            <input id="search-input" type="search" id="form1" class="form-control"  placeholder="Search for keyword..."/>
+          </div>
+          <button type="button" id="news-search" class="btn btn-primary" style="height: 38px; background-color: #f7ca14;   border: 4px solid rgba(253, 253, 253, 0.1); color: #2C2C2C;">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="news-loader" style="display:none; justify-content: center; color: #f7ca14;">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row gx-3" id="newsResults">
+      </div>
+
+
+    </div>
+  </section>
+
+  <section class="page_footer">
+    <div class="footer_container">
+      <div class="footer_social">
+        <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+
+
+      <ul class="explore">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="pages/user_account.html">Account</a>
+        </li>
+        <li>
+          <a href="pages/terms.html">Terms</a>
+        </li>
+        <li>
+          <a href="pages/privacypolicy.html">Privacy Policy</a>
+        </li>
+      </ul>
+
+      <div class="footer_email">
+        <a href="#"> <i class="fa-solid fa-envelope"> </i> cryptoeagle@gmail.com</a>
+      </div>
+    </div>
+    </div>
+
+    <section class="footer_logo">
+      <div class="bottom_logo">
+        <p class="footer_slogan">
+          <span>CryptoEagle </span> all-in-one crypto tool
+        </p>
+      </div>
+      <p class="copyright">CryptoEagle @ 2022</p>
+    </section>
+  </section>
+  <!-------------------------------------------SCRIPTS---------------------------->
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script src="../js/materialize.min.js"></script>
+  <script src="../js/displaynews.js"> </script>
+
+  <script>
+    //page loader
+    
+    document.querySelector('#navbar').classList.toggle('loading');
+    document.querySelector('.page_footer').classList.toggle('loading');
+    document.querySelector('.hero_news').classList.toggle('loading');
+    setTimeout(function wait() {
+      document.querySelector('#navbar').classList.toggle('loading');
+      document.querySelector('.page_footer').classList.toggle('loading');
+      document.querySelector('.hero_news').classList.toggle('loading');
+    }, 3100);
+
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    var nav = document.querySelector('nav');
+    nav.classList.add('shadow', 'bg-dark', 'bg-opacity-25');
+
+    window.addEventListener('scroll', function () {
+      if (window.pageYOffset > 50) {
+        nav.classList.add('shadow', 'bg-dark', 'bg-opacity-100');
+      } else {
+        nav.classList.remove('shadow', 'bg-dark', 'bg-opacity-100');
+        nav.classList.add('shadow', 'bg-dark', 'bg-opacity-25');
+
+      }
+    });
+
+    var button = document.querySelector('.navbar-toggler')
+    button.addEventListener("click", () => {//opens the options menu
+      document.querySelector('.tradingview-widget-container').classList.toggle("active");
+      document.querySelector('#hero_text').classList.toggle("active");
+      document.querySelector('#hero_text2').classList.toggle("active");
+
+    });
+  </script>
+
+  <script>
+    
+    TweenMax.to(".page-preloader", 1, {
+      top: "-190%",
+      ease: Expo.easeInOut,
+      delay: 2.5
+    });
+    
+  </script>
+
+
+
+</body>
+
+</html>
