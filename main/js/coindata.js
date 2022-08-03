@@ -286,8 +286,8 @@ function displaychart(coinid) {
     prices24h_time.push(current_date + " " + current_time + ":00")
     counter--;
   }
-  console.log(prices24h)
-  console.log(prices24h_time)
+  //console.log(prices24h)
+  //console.log(prices24h_time)
   //-------------------prices stored in prices24h[], dates stored in prices24h_time[]  
 
   //------------------------------fetch data for 7d chart------------------------
@@ -305,25 +305,26 @@ function displaychart(coinid) {
   var date = new Date();
   var current_day = new Date();
   var daycounter = 7;
+  var day = []//second array to store date of each hour, array needed as overwriting setDate() causes issues with date
+
   for (let j = 0; j < chart7d.prices.length; j++) {
-
     currentDate.setHours(date.getHours() - counter7d + 1)//sets the hour depending on how far it is from the current hour
-    current_day.setDate(date.getDate() - daycounter);
+    day[j] = new Date();
+    day[j].setDate(date.getDate() - daycounter)
 
-    if (currentDate.getHours() == 23) {//starts at 7 days away, decrements days when the time hits 23:00 (end of day)
-      daycounter--
+    if (currentDate.getHours() == 23) {
+      daycounter--//if reached end of day, decrement days to subtract
     }
-
-    prices7d_time.push(current_day.toLocaleDateString() + " " + currentDate.getHours() + ":00")
+    prices7d_time.push(day[j].toLocaleDateString() + " " + currentDate.getHours() + ":00")
     counter7d--//decrements the day counter
   }
 
-  console.log(prices7d)
-  console.log(prices7d_time)
+  //console.log(prices7d)
+  //console.log(prices7d_time)
   //------------------------------------------------------------------------------------------
 
   //------------------------------fetch data for 1M chart------------------------
-  data1M.open("GET", "https://api.coingecko.com/api/v3/coins/" + coinid + "/market_chart?vs_currency=usd&days=30&interval=hourly", false);//daily 30d data
+  data1M.open("GET", "https://api.coingecko.com/api/v3/coins/" + coinid + "/market_chart?vs_currency=usd&days=30&interval=hourly", false);//hourly 30d data
   data1M.send(null);
   var chart1M = JSON.parse(data1M.responseText);
   var prices1M = [];
@@ -353,8 +354,8 @@ function displaychart(coinid) {
     counter1M--//decrements the day counter
   }
 
-  console.log(prices1M)
-  console.log(prices1M_time)
+  //console.log(prices1M)
+  //console.log(prices1M_time)
 
   //------------------------------------------------------------------------------------------
 
@@ -379,8 +380,8 @@ function displaychart(coinid) {
     counter3M--
     prices3M_time.push(days3M[i].toDateString())
   }
-  console.log(prices3M)
-  console.log(prices3M_time)
+  //console.log(prices3M)
+  //console.log(prices3M_time)
 
   //------------------------------------------------------------------------------------------
 
@@ -404,8 +405,8 @@ function displaychart(coinid) {
     counter1Y--
     prices1Y_time.push(days1Y[i].toDateString())
   }
-  console.log(prices1Y)
-  console.log(prices1Y_time)
+  //console.log(prices1Y)
+  //console.log(prices1Y_time)
 
 
   //------------------------------------------------------------------------------------------
