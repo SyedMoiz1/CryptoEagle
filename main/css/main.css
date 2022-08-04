@@ -38,70 +38,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 8%;
+  width: 188px;
   height: 25vh;
 
   z-index: 2;
-}
-
-@media screen and (max-width:2400px) and (min-width: 2200px) {
-  .loader {
-    width: 9%;
-  }
-}
-
-@media screen and (max-width:2199px) and (min-width: 1900px) {
-  .loader {
-    width: 10%;
-  }
-}
-
-@media screen and (max-width:1899px) and (min-width: 1700px) {
-  .loader {
-    width: 11%;
-  }
-}
-
-@media screen and (max-width:1699px) and (min-width: 1500px) {
-  .loader {
-    width: 12%;
-  }
-}
-
-@media screen and (max-width:1499px) and (min-width: 1300px) {
-  .loader {
-    width: 13%;
-  }
-}
-
-@media screen and (max-width:1299px) and (min-width: 1100px) {
-  .loader {
-    width: 14%;
-  }
-}
-
-@media screen and (max-width:1099px) and (min-width: 1000px) {
-  .loader {
-    width: 15%;
-  }
-}
-
-@media screen and (max-width:999px) and (min-width: 900px) {
-  .loader {
-    width: 19%;
-  }
-}
-
-@media screen and (max-width:899px) and (min-width: 700px) {
-  .loader {
-    width: 20%;
-  }
-}
-
-@media screen and (max-width:699px) and (min-width: 500px) {
-  .loader {
-    width: 27%;
-  }
 }
 
 #navbar.loading {
