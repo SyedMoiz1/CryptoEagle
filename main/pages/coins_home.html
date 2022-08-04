@@ -88,7 +88,7 @@
     </div>
   </div>
   <section class="body">
-    <div class="coins_container">
+    <div class="container">
 
 
 
@@ -218,8 +218,9 @@
 
       <i class="fa-solid fa-xmark" id="modal-close"></i>
 
-      <div id="modal-container" class="container">
+      <div id="modal-container" class="container" style="display: block;">
         <div class='container' id="modal-left">
+          <div class="left1">
           <div class="modal-image-container">
             <img src="" alt="" id="modal-image">
           </div>
@@ -233,6 +234,8 @@
             </div>
 
           </div>
+          </div>
+          <div class="left2">
           <div class="modal-price">
             <p class="modal-price-text">Price (USD): <span>$</span></p>
             <div class="modal-price-value" id="modal-price-value">000</div>
@@ -246,7 +249,7 @@
             <div class="modal-volume-value">000</div>
           </div>
         </div>
-
+        </div>
         <div class='container' id="modal-right">
           <div class="container">
             <div id="chart_selectors">
@@ -258,8 +261,8 @@
                 <button type="button" class="btn text-white bg-dark" id="btn1Y">1Y</button>
               </div>
             </div>
-            <div class="container">
-              <canvas id="modal-chart" width="800" height="500"> </canvas>
+            <div class="container1">
+              <canvas id="modal-chart" height="165px" > </canvas>
             </div>
           </div>
         </div>

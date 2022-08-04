@@ -452,6 +452,9 @@ function displaychart(coinid) {
             radius: point_radius
           }
         },
+        responsive: {
+          Boolean: true
+        }
 
       },
       scales: {
