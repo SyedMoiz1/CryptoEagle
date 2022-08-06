@@ -1504,3 +1504,9 @@ body {
   transform: scale(1.009);
   box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
 }
+
+.authentication_box{
+  height: 400px;
+  width: 300px;
+  background-color: var(--tertiary-color);
+}

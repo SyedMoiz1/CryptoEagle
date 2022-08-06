@@ -60,15 +60,15 @@ $(document).ready(function () {
             success: function (newsdata) { //succefully fetches data
                 let output = "";
                 let news = newsdata.articles;//saves array of all articles in variable news
+                console.log(news)
                 if (news.length == 0) {
                     console.log('empty')
                     $("#newsResults").html(
                         '<h4 style="color: white; padding-top: 20px; margin-bottom:200px ;">There are no articles, try searching for something else </h4> '
                     );
                 }
-
                 for (var i in news) {
-
+                    
                     //save entire data in a grid of divs
                     output += `
                         <div class="col-lg-4 col-sm-12 col-md-6">
@@ -81,7 +81,7 @@ $(document).ready(function () {
                             <div class="card-body">
                             <p class="fw-italic" style="font-size: 12px;font-weight:200; color:#8e9db5; text-transform: uppercase;" >${news[i].source.name}</p>
                             <h5 class="card-title">Title: <a href="${news[i].url}" title="${news[i].title}" style="text-decoration: none;">${news[i].title}</a></h5>
-                            <p > <span class="fw-bold">Published: </span> ${news[i].publishedAt}</p>
+                            <p id:"published" > <span class="fw-bold">Published: </span> ${news[i].publishedAt.substring(0,10)}</p>
                             <div >
                             <p id="card-desc" > <span class="fw-bold" style="font-weight:500; ">Description: </span>${news[i].description} </p>
                             </div>
@@ -92,12 +92,11 @@ $(document).ready(function () {
                         </div>
                     `;
 
-
                 }
 
                 if (output !== "") {
                     $("#newsResults").html(output);
-                    console.log(output)
+
                 }
 
             },

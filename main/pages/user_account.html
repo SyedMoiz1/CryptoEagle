@@ -55,33 +55,17 @@
       </div>
     </div>
   </nav>
-  <section class="hero_news">
-    <div class="container">
-      <p style="color:white ; " id="news-title">Top News Articles</p>
-      <div class="container" style="display: inline; justify-content: start;">
 
-        <div class="input-group" style="height: 38px;">
-          <div class="form-outline">
-            <input id="search-input" type="search" id="form1" class="form-control"  placeholder="Search for keyword..."/>
-          </div>
-          <button type="button" id="news-search" class="btn btn-primary" style="height: 38px; background-color: #f7ca14;   border: 4px solid rgba(253, 253, 253, 0.1); color: #2C2C2C;">
-            <i class="fas fa-search"></i>
-          </button>
+  <section class="hero" style="height:95vh; "> 
+    <div class="container" style=" display: flex; justify-content:center; align-items: center;">
+
+        <div class="authentication_box">
+            
         </div>
-      </div>
-
-      <div id="news-loader" style="display:none; justify-content: center; color: #f7ca14;">
-        <div class="spinner-border" role="status">
-          <span class="visually-hidden">Loading...</span>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="row gx-3" id="newsResults">
-      </div>
 
 
     </div>
+
   </section>
 
   <section class="page_footer">
@@ -142,12 +126,10 @@
     
     document.querySelector('#navbar').classList.toggle('loading');
     document.querySelector('.page_footer').classList.toggle('loading');
-    document.querySelector('#news-search').classList.toggle('loading');
 
     setTimeout(function wait() {
       document.querySelector('#navbar').classList.toggle('loading');
       document.querySelector('.page_footer').classList.toggle('loading');
-      document.querySelector('#news-search').classList.toggle('loading');
 
     }, 2850);
 
@@ -188,9 +170,3 @@
     });
     
   </script>
-
-
-
-</body>
-
-</html>
