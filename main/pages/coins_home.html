@@ -28,7 +28,8 @@
     <img src="../images/crypto-eagle-logo.png" class="loader" id="loader1" alt="">
   </div>
 
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-2 " id="navbar">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-2 " style="width: 100vw; padding-right: 10px;"
+    id="navbar">
     <div class="container" style="max-width: 1700px;">
       <a class="navbar-brand" href="../index.html" style="font-size: 32px; font-weight:600; ">Crypto<span
           style="color: #f7ca14;">Eagle</span>
@@ -98,7 +99,7 @@
 
       <div class="table_top">
 
-        <h2 class="coins_home_header">Cryptocurrency Rankings</h2>
+        <p class="coins_home_header">Cryptocurrency Rankings</p>
 
         <div class="select-menu">
           <div class="select-btn">
@@ -148,25 +149,26 @@
 
 
       <!--coins table -->
-      <table class="table is-narrow is-hoverable" id="coins_table">
+      <div  style="overflow-x:auto;">
+        <table class="table is-narrow is-hoverable" id="coins_table">
 
-        <thead>
-          <!--table head-->
-          <tr>
-            <th class="rank">Rank</th>
-            <th class="name">Name</th>
-            <th class="symbol">Symbol</th>
-            <th class="price">Price (USD)</th>
-            <th class="market_cap">Market Cap</th>
-            <th class="volume_24h">Volume (24h)</th>
-            <th class="percentage_change_24h">24h % change</th>
-          </tr>
-        </thead>
+          <thead>
+            <!--table head-->
+            <tr>
+              <th class="rank">Rank</th>
+              <th class="name">Name</th>
+              <th class="symbol">Symbol</th>
+              <th class="price">Price (USD)</th>
+              <th class="market_cap">Market Cap</th>
+              <th class="volume_24h">Volume (24h)</th>
+              <th class="percentage_change_24h">24h % change</th>
+            </tr>
+          </thead>
 
-        <tbody id="cryptocurrencies">
-        </tbody>
-      </table>
-
+          <tbody id="cryptocurrencies">
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
   <!---------------------------------Hero Section Ends------------------------------------------------------->
@@ -218,12 +220,13 @@
   </section>
   <!---------------------------------Page Footer Ends------------------------------------------------------->
   <div class="coin-modal">
-    <div class="coin-page">
+    <div class="coin-page" >
 
+      <div class="container" style="z-index: 1;">
       <i class="fa-solid fa-xmark" id="modal-close"></i>
 
       <div id="modal-container" class="container" style="display: block;">
-        <div class='container' id="modal-left">
+        <div class='container' id="modal-left" style="overflow-x:auto;">
           <div class="left1">
             <div class="modal-image-container">
               <img src="" alt="" id="modal-image">
@@ -241,7 +244,7 @@
           </div>
           <div class="left2">
             <div class="modal-price">
-              <p class="modal-price-text">Price (USD): <span>$</span></p>
+              <p class="modal-price-text">Price (USD):</p>
               <div class="modal-price-value" id="modal-price-value">000</div>
             </div>
             <div class="modal-marketcap">
@@ -255,7 +258,7 @@
           </div>
         </div>
         <div class='container' id="modal-right">
-          <div class="container">
+          <div class="container" style="height: 100%;">
             <div id="chart_selectors">
               <div class="btn-group" role="group" aria-label="Basic example" id="chart_selectorbtn">
                 <button type="button" class="btn text-white bg-dark" id="btn24h">24h</button>
@@ -265,17 +268,18 @@
                 <button type="button" class="btn text-white bg-dark" id="btn1Y">1Y</button>
               </div>
             </div>
-            <div class="container1">
+            <div class="container1" style="overflow-x:auto;">
               <canvas id="modal-chart" height="165px"> </canvas>
             </div>
           </div>
         </div>
       </div>
+      </div>
     </div>
 
   </div>
   <div class="coin-modal-preloader">
-    <div class="coin-page-preloader">
+    <div class="coin-page-preloader" style="align-items:center ; ">
       <img src="../images/coin-preloader.gif" alt="" id="coin-preloader">
     </div>
   </div>

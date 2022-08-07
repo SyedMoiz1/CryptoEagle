@@ -193,7 +193,7 @@ function resetBoard(order) {
       document.querySelector('.modal-name').innerText = cryptocurrencies[selected_rank - 1].name;
       document.querySelector('#modal_percentage_value').innerText = cryptocurrencies[selected_rank - 1].percentage_change_24h.toFixed(3);
       document.querySelector('.modal-marketcap-value').innerText = cryptocurrencies[selected_rank - 1].market_cap
-      document.querySelector('.modal-price-value').innerText = cryptocurrencies[selected_rank - 1].price
+      document.querySelector('.modal-price-value').innerText ="$"+cryptocurrencies[selected_rank - 1].price
       document.querySelector('.modal-volume-value').innerText = cryptocurrencies[selected_rank - 1].volume_24h
 
 

@@ -32,6 +32,8 @@ body {
   background: #212529;
   z-index: 2;
   box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+  justify-content: center;
+  align-items: center;
 
 }
 
@@ -41,7 +43,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 200px;
-  height: 26vh;
+  height: 300px;
 
   z-index: 2;
 }
@@ -71,6 +73,14 @@ body {
 .tradingview-widget-container.active {
 
   display: none;
+}
+
+@media only screen and (max-width: 480px) {
+
+  /* horizontal scrollbar for tables if mobile screen */
+  .hero_text {
+    padding-left: 0px;
+  }
 }
 
 #hero_text.active {
@@ -128,14 +138,16 @@ body {
 
 @media screen and (max-width:600px) {
   #hero_text {
-    padding-left: 36px;
+    font-size: 45px;
+    padding-left: 0px;
     justify-content: center;
   }
 }
 
 @media screen and (max-width:600px) {
   #hero_text2 {
-    padding-left: 36px;
+    padding-left: 0px;
+    font-size: 45px;
   }
 }
 
@@ -302,6 +314,7 @@ body {
 
   .features_container_top .top2 .top2_text {
     font-size: 25px;
+    
 
   }
 
@@ -325,10 +338,14 @@ body {
 
   .features_container_top .top2 .top2_text {
     font-size: 25px;
+    padding-bottom: 10px;
   }
 
   .features_container_top .top3 .top3_text {
     font-size: 25px;
+  }
+  .features_container_top .top2 {
+    height: 350px;
   }
 }
 
@@ -377,7 +394,7 @@ body {
   margin: 25px;
   padding: 20px;
   border-radius: 20px;
-  height: 300px;
+  height: 320px;
   width: 400px;
 }
 
@@ -403,7 +420,7 @@ body {
   margin: 25px;
   padding: 20px;
   border-radius: 20px;
-  height: 300px;
+  height: 320px;
   width: 400px;
 
 }
@@ -466,15 +483,15 @@ body {
 
 @media screen and (max-width:440px) {
   .features_container_bottom .bottom1 .bottom1_text {
-    font-size: 20px;
+    font-size: 25px;
   }
 
   .features_container_bottom .bottom2 .bottom2_text {
-    font-size: 20px;
+    font-size: 25px;
   }
 
   .features_container_bottom .bottom3 .bottom3_text {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 
@@ -886,6 +903,8 @@ body {
   font-weight: 700;
   color: white;
   line-height: 90px;
+  font-size: 30px;
+
 }
 
 .select-menu {
@@ -975,9 +994,19 @@ body {
   font-size: 14px;
 }
 
-.coins_home_header {
-  font-size: 50px;
+@media screen  and (max-width: 480px) {
+  .coins_home_header{
+    font-size: 45px;
+  }
 }
+@media screen  and (min-width: 481px) {
+  .coins_home_header{
+    font-size: 50px;
+  }
+}
+
+
+
 
 .table_top {
   display: flex;
@@ -1053,7 +1082,7 @@ body {
 
 .coin-modal {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
@@ -1070,6 +1099,8 @@ body {
   height: 700px;
   background-color: var(--tertiary-color);
   border-radius: 7px;
+  justify-content:center ;
+  align-items: center;
 }
 
 .coin-modal-preloader {
@@ -1087,7 +1118,7 @@ body {
 }
 
 .coin-modal-preloader .coin-page-preloader {
-  width: 1225px;
+  width: 1425px;
   height: 700px;
   background-color: var(--tertiary-color);
   border-radius: 7px;
@@ -1222,31 +1253,47 @@ body {
 }
 
 @media screen and (max-width:1400px) and (min-width: 1200px) {
+  .coin-modal{
+    align-items: center;
+  }
   .coin-modal .coin-page {
     width: 1200px;
+
   }
-  .coin-modal-preloader .coin-page-preloader{
+
+  .coin-modal-preloader .coin-page-preloader {
     width: 1200px;
   }
-  .container1{
+
+  .container1 {
     display: flex;
-    align-items:center ;
+    align-items: center;
   }
 }
 
 @media screen and (max-width:1199px) and (min-width: 825px) {
+  .coin-modal{
+    align-items: center;
+  }
   .coin-modal .coin-page {
-    margin-top: 115px;
-    margin-bottom: 25px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     width: 800px;
-    height: 820px;
+    height: 70%;
+    max-height: 728px;
+    top: 0;
+    bottom: 0;
   }
+
   .coin-modal-preloader .coin-page-preloader {
-    margin-top: 115px;
-    margin-bottom: 25px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     width: 800px;
-    height: 820px;
+
+    height: 70%;
+    max-height: 728px;
   }
+
   #modal-right {
     float: none;
     margin: 0px;
@@ -1259,19 +1306,22 @@ body {
   #modal-chart {
     height: 900px;
   }
-  .modal-name{
+
+  .modal-name {
     font-size: 30px;
     margin: 0px;
     margin-top: 10px;
     margin-bottom: 5px;
     justify-content: center;
   }
-  .modal-percentage{
+
+  .modal-percentage {
     margin-left: 10px;
     justify-content: center;
     align-items: center;
     padding-top: 10px;
   }
+
   #modal-left {
     height: 40%;
     width: 100%;
@@ -1309,27 +1359,45 @@ body {
     padding-top: 20px;
     padding-right: 5px;
   }
-  .container1{
+
+  .container1 {
     align-items: center;
   }
 }
-@media screen and (max-width:824px) and (min-width: 400px) {
+
+@media screen and (max-width:824px) {
+ #news-title{
+  font-size: 60px;
+  font-weight: 600;
+
+ }
+  .cotd_text{
+    font-size: 45px;
+    margin-left: 0px;
+  }
+  .coin-modal{
+ 
+    align-items: center;
+    justify-content: center;
+  }
   .coin-modal .coin-page {
-    margin-top: 115px;
-    margin-bottom: 25px;
-    margin-left: 30px;
-    margin-right: 10px;
-    width: 450px;
-    height: 735px;
+
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 380px;
+    height: 70%;
+    max-height: 628px;
   }
+
   .coin-modal-preloader .coin-page-preloader {
-    margin-top: 115px;
-    margin-bottom: 25px;
-    margin-left: 30px;
-    margin-right: 10px;
-    width: 450px;
-    height: 735px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    width: 380px;
+    height: 70%;
+    max-height: 628px;
   }
+
   #modal-right {
     float: none;
     margin: 0px;
@@ -1353,12 +1421,14 @@ body {
     padding: 25px;
     padding-top: 0%;
   }
+
   .modal-price,
   .modal-marketcap,
-  .modal-volume{
+  .modal-volume {
     font-size: 13px;
     padding-left: 10px;
   }
+
   .left1 {
     height: 100%;
     width: 45%;
@@ -1374,47 +1444,56 @@ body {
   .left2 {
     height: 100%;
     width: 60%;
-    padding-left: 25px;
+    padding-left: 35px;
     padding-top: 15px;
     align-items: center;
+    font-size: 14px
   }
 
   .modal-image-container {
-    height: 65%;
+    height: 55%;
     padding-bottom: 0px;
   }
-.modal-percentage{
-  margin-left: 10px;
-}
+
+  .modal-percentage {
+    margin-left: 10px;
+  }
+
   .modal-name-container {
     height: 35%;
     padding-top: 10px;
     padding-right: 0px;
     display: flex;
   }
-  .modal-name{
+
+  .modal-name {
     font-size: 25px;
     padding-bottom: 9px;
     margin: 0px;
     justify-content: start;
   }
-  .modal-name-container h1{
+
+  .modal-name-container h1 {
     margin-right: 3px;
   }
-  .container1{
+
+  .container1 {
     align-items: center;
     padding-top: 15px;
   }
-  #chart_selectorbtn{
+
+  #chart_selectorbtn {
     height: 30px;
     font-size: 20px;
   }
-  #chart_selectorbtn button{
+
+  #chart_selectorbtn button {
     font-size: 15px;
     align-items: center;
     padding-bottom: 10px;
   }
-  #modal-chart{
+
+  #modal-chart {
     height: 200px;
   }
 }
@@ -1439,7 +1518,7 @@ body {
   height: 90%;
   display: flex;
   justify-content: center;
-  
+
 
 }
 
@@ -1461,7 +1540,7 @@ body {
   background-color: #2c323a;
 }
 
-#news-search.loading{
+#news-search.loading {
   display: none;
 }
 
@@ -1476,12 +1555,12 @@ body {
   padding: 10px;
 
 }
-
+@media screen and (min-width:825px) {
 #news-title {
   font-size: 70px;
   font-weight: 600;
 }
-
+}
 .errorMsg {
   font-size: 34px;
   height: 100vh;
@@ -1505,8 +1584,9 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
 }
 
-.authentication_box{
-  height: 400px;
-  width: 300px;
+.authentication_box {
+  height: 450px;
+  width: 400px;
   background-color: var(--tertiary-color);
+
 }
