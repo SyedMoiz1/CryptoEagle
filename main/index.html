@@ -21,278 +21,319 @@
 
 </head>
 
-<body>
+<body style="overflow-x: hidden;">
+    <div class="body-wrapper">
+    <!--loader-->
+    <div class="wrapper">
+      <img src="images/crypto-eagle-logo.png" class="loader" alt="" style="z-index: 3;">
+    </div>
 
-  <!--loader-->
-  <div class="wrapper">
-    <img src="images/crypto-eagle-logo.png" class="loader" alt="">
-  </div>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-2"
+      style="width: 100%; padding-bottom: 0px; padding-right: 15px;display: none; " id="navbar">
+      <div class="container" style="max-width: 1700px;">
+        <a class="navbar-brand" href="#" style="font-size: 32px; font-weight:600; ">Crypto<span
+            style="color: #f7ca14;">Eagle</span>
+          <img src="images/crypto-eagle-logo.png" alt="" style="height: 60px; ">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-2 " style="width: 100vw;" id="navbar">
-    <div class="container" style="max-width: 1700px;">
-      <a class="navbar-brand" href="#" style="font-size: 32px; font-weight:600; ">Crypto<span
-          style="color: #f7ca14;">Eagle</span>
-        <img src="images/crypto-eagle-logo.png" alt="" style="height: 60px; ">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mx-auto"></div>
+          <ul class="navbar-nav" style="align-items: center;">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#" style="font-size:18px ;">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="pages/coins_home/" style="font-size:18px ;">Coins</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="pages/news/" style="font-size:18px ;">News</a>
+            </li>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <div class="mx-auto"></div>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#" style="font-size:18px ;">Home</a>
+            <li class="nav-item">
+              <a class="nav-link text-white" id="sign-in-nav" href="pages/user_account_signin/"
+                style="font-size:18px ;">Sign in</a>
+            </li>
+            <li id="image-nav-item" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--Homepage Image -->
+
+    <div class="banner-image w-100 vh-100 d-block justify-content-start align-items-center" id="homepage_hero"
+      style="background-position: right; width: 100%; ">
+      <div class="account-modal-container" style="padding-right: 0px;">
+        <div class="account-modal">
+          <i class="fa fa-angle-double-right" id="account-modal-close" aria-hidden="true"
+            style="color:#F7CA14; font-size: 25px; cursor: pointer; display: block;"></i>
+          <div class="account-modal-content">
+  
+            <div class="modal-inner-containers" id="account-modal-image-container"></div>
+            <div class="modal-inner-containers" id="account-modal-email-container">
+              <h4 id="modal-email"></h4>
+            </div>
+            <div class="modal-watchlist">
+              <h5>Watchlist:</h5>
+              <div class="watchlist-container">
+                <ul id="watchlist-list">
+                </ul>
+              </div>
+            </div>
+  
+          </div>
+          <button type="button" class="btn btn-primary" id="modal-signout">Sign out</button>
+
+        </div>
+      </div>
+
+
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+          async>
+            {
+              "symbols": [
+                {
+                  "description": "Bitcoin",
+                  "proName": "BINANCE:BTCUSDT"
+                },
+                {
+                  "description": "",
+                  "proName": "BINANCE:ETHUSDT"
+                },
+                {
+                  "description": "",
+                  "proName": "BINANCE:BNBUSDT"
+                },
+                {
+                  "description": "",
+                  "proName": "BINANCE:ADAUSDT"
+                },
+                {
+                  "description": "",
+                  "proName": "BINANCE:XRPUSDT"
+                },
+                {
+                  "description": "",
+                  "proName": "BINANCE:DOGEUSDT"
+                },
+                {
+                  "description": "",
+                  "proName": "BINANCE:SHIBUSDT"
+                },
+                {
+                  "description": "",
+                  "proName": "BINANCE:DOTUSDT"
+                },
+                {
+                  "description": "",
+                  "proName": "BINANCE:MATICUSDT"
+                },
+                {
+                  "description": "",
+                  "proName": "BINANCE:LINKUSDT"
+                },
+                {
+                  "description": "",
+                  "proName": "BINANCE:MANAUSDT"
+                },
+                {
+                  "description": "",
+                  "proName": "BINANCE:HBARUSDT"
+                },
+                {
+                  "description": "",
+                  "proName": "BINANCE:VETUSDT"
+                },
+                {
+                  "description": "",
+                  "proName": "BINANCE:ONEUSDT"
+                },
+                {
+                  "description": "",
+                  "proName": "BINANCE:XMRUSDT"
+                },
+                {
+                  "description": "",
+                  "proName": "BINANCE:LRCUSDT"
+                },
+                {
+                  "description": "",
+                  "proName": "BINANCE:SOLUSDT"
+                },
+                {
+                  "description": "",
+                  "proName": "BINANCE:AVAXUSDT"
+                },
+
+                {
+                  "description": "",
+                  "proName": "BINANCE:ALGOUSDT"
+                },
+                {
+                  "description": "",
+                  "proName": "BINANCE:XLMUSDT"
+                },
+                {
+                  "description": "",
+                  "proName": "BINANCE:NEARUSDT"
+                }
+              ],
+                "showSymbolLogo": true,
+                  "colorTheme": "dark",
+                    "isTransparent": true,
+                      "displayMode": "adaptive",
+                        "locale": "en"
+            }
+          </script>
+      </div>
+      <div class="content text-center">
+        <h1 class="text-white" id="hero_text"> <span id="hero_span">Your all-in-one</span>
+          <h1 class="text-white" id="hero_text2"> <span id="hero_span2">cryptocurrency
+              tool</span>
+
+
+      </div>
+    </div>
+
+
+    <section class="features_section">
+
+      <div class="features_container_top">
+
+
+        <div class="top1">
+          <p class=about_features>Crypto<span>Eagle</span></p>
+          <p class="text">offers many different features that can assist you in trading your favourite coins!</p>
+        </div>
+
+
+        <div class="top2">
+          <img class="coins-logo" src="images/crypto-coins.png" alt="Crypto chart" style="padding-bottom: 15px;">
+          <a href="pages/coins_home/" class="top2_text"> <br> Browse over 20 different cryptocurrencies, showing
+            live,
+            real-time data </a>
+        </div>
+
+        <div class="top3">
+          <img class="coins-logo" src="images/coins-logo.png" alt="Crypto chart" style="padding-bottom: 15px;">
+          <a href="pages/coins_home/" class="top3_text"><br>
+            View charts showing updated historical data for all coins
+
+          </a>
+        </div>
+
+      </div>
+
+      <div class="features_container_bottom">
+
+        <div class="bottom2">
+          <img class="news-logo" src="images/news-logo.png" alt="News" style="padding-bottom: 15px;">
+          <a href="pages/news/" class="bottom2_text"><br>Keep <span>up-to-date</span> with the latest news
+            regarding
+            different cryptocurrencies</a>
+        </div>
+
+        <div class="bottom3">
+          <img class="account-logo" src="images/account-logo.png" alt="User account" style="padding-bottom: 15px;">
+          <a href="#" class="bottom3_text"><br><span>Create an account</span> to save your favourite
+            coins on a watchlist</a>
+        </div>
+      </div>
+
+      <div class="bottom_heading">
+        <h2 style="font-weight: 600;">...Best part of all, it's completely free!</h2>
+      </div>
+
+    </section>
+
+    <script src="./js/navloading.js"></script>
+    <!-----------------------------------------BOOTSTRAP SCRIPT NAVBAR------------------------------>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var nav = document.querySelector('nav');
+
+      window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 15) {
+          nav.classList.add('bg-dark', 'shadow');
+        } else {
+          nav.classList.remove('bg-dark', 'shadow');
+        }
+      });
+
+      var button = document.querySelector('.navbar-toggler')
+      button.addEventListener("click", () => {//opens the options menu
+        setTimeout(function wait() {
+
+          nav.classList.add('togg')
+          document.querySelector('#hero_text').classList.toggle("active");
+          document.querySelector('#hero_text2').classList.toggle("active");
+        }, 0);
+
+
+      });
+    </script>
+    <!--------------------------------------------------------------------------------->
+
+    <!----------------------------WRAPPER SCRIPT GSAP----------------------------------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="js/homepage-wrapper.js"></script>
+
+    <!--------------------------------------------------------------------------------->
+
+
+    <section class="page_footer">
+      <div class="footer_container">
+        <div class="footer_social">
+          <a href="mailto:syedmoiz416@gmail.com" class="email"><i class="fa fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/syedmoiz1/" class="linkedin"><i class="fab fa-linkedin"></i></a>
+        </div>
+
+
+        <ul class="explore">
+          <li>
+            <a href="index.html">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="pages/coins_home.html" style="font-size:18px ;">Coins</a>
+          <li>
+            <a href="pages/coins_home/">Coins</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="pages/news.html" style="font-size:18px ;">News</a>
+          <li>
+            <a href="pages/news/">News</a>
           </li>
-
-          <li class="nav-item">
-            <a class="nav-link text-white" href="pages/user_account_signin.html" style="font-size:18px ;">Sign in</a>
+          <li>
+            <a href="pages/privacypolicy/">Privacy Policy</a>
           </li>
         </ul>
-      </div>
-    </div>
-  </nav>
 
-  <!--Homepage Image -->
-  <div class="banner-image w-100 vh-100 d-block justify-content-start align-items-center" id="homepage_hero">
-    <div class="tradingview-widget-container">
-      <div class="tradingview-widget-container__widget"></div>
-      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
-        async>
-          {
-            "symbols": [
-              {
-                "description": "Bitcoin",
-                "proName": "BINANCE:BTCUSDT"
-              },
-              {
-                "description": "",
-                "proName": "BINANCE:ETHUSDT"
-              },
-              {
-                "description": "",
-                "proName": "BINANCE:BNBUSDT"
-              },
-              {
-                "description": "",
-                "proName": "BINANCE:ADAUSDT"
-              },
-              {
-                "description": "",
-                "proName": "BINANCE:XRPUSDT"
-              },
-              {
-                "description": "",
-                "proName": "BINANCE:DOGEUSDT"
-              },
-              {
-                "description": "",
-                "proName": "BINANCE:SHIBUSDT"
-              },
-              {
-                "description": "",
-                "proName": "BINANCE:DOTUSDT"
-              },
-              {
-                "description": "",
-                "proName": "BINANCE:MATICUSDT"
-              },
-              {
-                "description": "",
-                "proName": "BINANCE:LINKUSDT"
-              },
-              {
-                "description": "",
-                "proName": "BINANCE:MANAUSDT"
-              },
-              {
-                "description": "",
-                "proName": "BINANCE:HBARUSDT"
-              },
-              {
-                "description": "",
-                "proName": "BINANCE:VETUSDT"
-              },
-              {
-                "description": "",
-                "proName": "BINANCE:ONEUSDT"
-              },
-              {
-                "description": "",
-                "proName": "BINANCE:XMRUSDT"
-              },
-              {
-                "description": "",
-                "proName": "BINANCE:LRCUSDT"
-              },
-              {
-                "description": "",
-                "proName": "BINANCE:SOLUSDT"
-              },
-              {
-                "description": "",
-                "proName": "BINANCE:AVAXUSDT"
-              },
-
-              {
-                "description": "",
-                "proName": "BINANCE:ALGOUSDT"
-              },
-              {
-                "description": "",
-                "proName": "BINANCE:XLMUSDT"
-              },
-              {
-                "description": "",
-                "proName": "BINANCE:NEARUSDT"
-              }
-            ],
-              "showSymbolLogo": true,
-                "colorTheme": "dark",
-                  "isTransparent": true,
-                    "displayMode": "adaptive",
-                      "locale": "en"
-          }
-        </script>
-    </div>
-    <div class="content text-center">
-      <h1 class="text-white" id="hero_text"> <span id="hero_span">Your all-in-one</span>
-        <h1 class="text-white" id="hero_text2"> <span id="hero_span2">cryptocurrency
-            tool</span>
-
-
-    </div>
-  </div>
-
-
-  <section class="features_section">
-
-    <div class="features_container_top">
-
-
-      <div class="top1">
-        <p class=about_features>Crypto<span>Eagle</span></p>
-        <p class="text">offers many different features that can assist you in trading your favourite coins!</p>
       </div>
 
-
-      <div class="top2">
-        <img class="coins-logo" src="images/crypto-coins.png" alt="Crypto chart" style="padding-bottom: 15px;">
-        <a href="pages/coins_home.html" class="top2_text"> <br> Browse over 20 different cryptocurrencies, showing live,
-          real-time data </a>
-      </div>
-
-      <div class="top3">
-        <img class="coins-logo" src="images/coins-logo.png" alt="Crypto chart" style="padding-bottom: 15px;">
-        <a href="pages/coins_home.html" class="top3_text"><br>
-          View charts showing updated historical data for all coins
-
-        </a>
-      </div>
-
-    </div>
-
-    <div class="features_container_bottom">
-
-      <div class="bottom2">
-        <img class="news-logo" src="images/news-logo.png" alt="News" style="padding-bottom: 15px;">
-        <a href="pages/news.html" class="bottom2_text"><br>Keep <span>up-to-date</span> with the latest news
-          regarding
-          different cryptocurrencies</a>
-      </div>
-
-      <div class="bottom3">
-        <img class="account-logo" src="images/account-logo.png" alt="User account" style="padding-bottom: 15px;">
-        <a href="#" class="bottom3_text"><br><span>Create an account</span> to save your favourite
-          coins on a watchlist</a>
-      </div>
-    </div>
-
-    <div class="bottom_heading">
-      <h2 style="font-weight: 600;">...Best part of all, it's completely free!</h2>
-    </div>
-
-  </section>
-  <!-----------------------------------------BOOTSTRAP SCRIPT NAVBAR------------------------------>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-  <script type="text/javascript">
-    var nav = document.querySelector('nav');
-
-    window.addEventListener('scroll', function () {
-      if (window.pageYOffset > 15) {
-        nav.classList.add('bg-dark', 'shadow');
-      } else {
-        nav.classList.remove('bg-dark', 'shadow');
-      }
-    });
-
-    var button = document.querySelector('.navbar-toggler')
-    button.addEventListener("click", () => {//opens the options menu
-      document.querySelector('.tradingview-widget-container').classList.toggle("active");
-      document.querySelector('#hero_text').classList.toggle("active");
-      document.querySelector('#hero_text2').classList.toggle("active");
-
-    });
-  </script>
-  <!--------------------------------------------------------------------------------->
-
-  <!----------------------------WRAPPER SCRIPT GSAP----------------------------------->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-  <script src="js/homepage-wrapper.js"></script>
-
-  <!--------------------------------------------------------------------------------->
-
-
-  <section class="page_footer">
-    <div class="footer_container">
-      <div class="footer_social">
-        <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
-      </div>
-
-
-      <ul class="explore">
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="pages/coins_home.html">Coins</a>
-        </li>
-        <li>
-          <a href="pages/news.html">News</a>
-        </li>
-        <li>
-          <a href="pages/privacypolicy.html">Privacy Policy</a>
-        </li>
-      </ul>
-
-      <div class="footer_email">
-        <a href="#"> <i class="fa-solid fa-envelope"> </i> cryptoeagle@gmail.com</a>
-      </div>
-    </div>
-    </div>
-
-    <section class="footer_logo">
-      <div class="bottom_logo">
-        <p class="footer_slogan">
-          <span>CryptoEagle </span> <i class="fa-solid fa-minus"></i> Your all-in-one crypto tool
-        </p>
-      </div>
-      <p class="copyright">CryptoEagle @ 2022 - Web Design by <a href="https://www.linkedin.com/in/syedmoiz1/"
-          style="text-decoration:none ;color: #2C2C2C">Syed Moiz</a></p>
+      <section class="footer_logo">
+        <div class="bottom_logo">
+          <p class="footer_slogan">
+            <span>CryptoEagle </span> <i class="fa-solid fa-minus"></i> Your all-in-one cryptocurrency tool
+          </p>
+        </div>
+        <p class="copyright">CryptoEagle <i class="fa fa-copyright" aria-hidden="true" style="color:#2C2C2C;"></i> 2022
+          - Web Design by <a href="https://www.linkedin.com/in/syedmoiz1/"
+            style="text-decoration:none ;color: #2C2C2C">Syed Moiz</a></p>
+      </section>
     </section>
-  </section>
-<script src="./js/bundle.js"></script>
+    </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  <script src="./js/bundle.js"></script>
+
 </body>
 
 </html>

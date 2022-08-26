@@ -29,6 +29,12 @@ $(document).ready(function () {
 
     }
 
+    else{
+        $("#newsResults").html(
+            '<h4 style="color: white; padding-top: 20px; margin-bottom:200px ;">There are no articles, try searching for something else </h4> '
+        );
+    }
+
 
     function search_func(e) {
         e = e || window.event;
@@ -43,7 +49,7 @@ $(document).ready(function () {
 
     function displaynews(keyword) {
         let url = "https://newsapi.org/v2/everything?q=" + keyword + "&from=2022-07-26&sortBy=popularity&apiKey=1cc8451c95584bf686f4f719b9820688";
-
+        $.support.cors = true;
         $.ajax({
             url: url,
             method: "GET",
@@ -60,7 +66,6 @@ $(document).ready(function () {
             success: function (newsdata) { //succefully fetches data
                 let output = "";
                 let news = newsdata.articles;//saves array of all articles in variable news
-                console.log(news)
                 if (news.length == 0) {
                     console.log('empty')
                     $("#newsResults").html(
@@ -98,11 +103,15 @@ $(document).ready(function () {
                     $("#newsResults").html(output);
 
                 }
+                else{
+                    $("#newsResults").html(
+                        '<h4 style="color: white; padding-top: 20px; margin-bottom:200px ;">There are no articles, try searching for something else </h4> '
+                    );
+                }
 
             },
-            error: function () {//if any error occurs while fetching data
-                let errorMsg = `<div class="errorMsg center">Some error occured</div>`;
-                $("#newsResults").html(errorMsg);
+            error: function (e) {//if any error occurs while fetching data
+                console.log(e)
             }
         })
 
