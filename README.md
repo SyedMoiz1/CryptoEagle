@@ -1,5 +1,5 @@
 
-# CryptoEagle.ca
+# CryptoEagle.dev
 
 CryptoEagle is an all-in-one cryptocurrency trading tool designed for crypto-traders of all level of expertise. It Offers many useful features such as showing live data for all the top cryptocurrencies, provide the end-user with historical charts, and also a news search engine where the user can search for and access news articles from all around the web.
 
